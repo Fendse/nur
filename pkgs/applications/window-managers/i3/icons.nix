@@ -8,6 +8,8 @@ in
   i3.overrideAttrs ( oldAttrs : rec {
     pname = "i3-icons";
 
+    version = "4.18.3";
+
     patches = (lib.attrsets.attrByPath [ "patches" ] [] oldAttrs)
       ++ [
         "${iconPatch}/iconsupport.patch"
